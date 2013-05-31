@@ -1,0 +1,335 @@
+/*
+ * Theme Name: Manilla Fashion
+ * Theme URI: isobotie.zxq.net
+ * Description: 'A classic portfolio Theme'
+ * Author: Omatsola Isaac Sobotie
+ * Author URI: isobotie.zxq.net
+ * Version: 1.0
+ *
+ * */
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background:url(img/bg.jpg) repeat-x;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*GLOBAL STYLES*/
+h1 {
+    font-size: 27px;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+input {
+    background: #1e1e1e;
+    border: 1px solid #d9d9d9;
+    color: #d9d9d9;
+}
+
+input: focus, input:hover {
+    background: #383838;
+    color: #d9d9d9;
+}
+
+#wrap {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#header h1 {
+    width: 179px;
+    height: 43px;
+    float: left;
+    text-indent: -999px;
+    background: url(img/logo.png) no-repeat;
+    margin-top: 20px;
+}
+
+
+#header h1 a {
+    display: block;
+    width: 179px;
+    height: 43px;
+}
+
+#header ul{
+    overflow: hidden;
+    padding-left: 70px;
+
+}
+
+#header ul li {
+    padding-left: 40px;
+    float: left;
+    margin-right: 40px;
+    margin-top: 28px;
+
+}
+
+#header ul li#home {
+    background:url(img/home.png) no-repeat;
+    width: 39px;
+    height: 31px;
+}
+
+#header ul li#about {
+    background:url(img/about.png) no-repeat;
+    width: 39px;
+    height: 31px;
+}
+
+#header ul li#contact {
+    background:url(img/contact.png) no-repeat;
+    width: 39px;
+    height: 31px;
+}
+
+#header ul li a {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    position: relative;
+    top: 9px;
+    left: 3px;
+    font-family:Verdana, Geneva, sans-serif;
+}
+
+
+
+#header li#search {
+    margin-top: 22px;
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+#header li#search img {
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#header li#search input {
+    position: relative;
+    top: -10px;
+    height: 24px;
+}
+
+#header ul li#rss {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#header ul li#rss img {
+    width: 30px;
+    padding-right: 1px;
+    margin-top: 17px;
+}
+
+#header p#slogan {
+    font-size: 2em;
+    text-indent: -9999px;
+    background: url(img/slogan-text.png) no-repeat;
+    width: 569px;
+    height: 45px;
+    float: right;
+    padding-right: 14px;
+    margin-top: 20px;
+    padding-bottom: 5px;
+}
+
+#main {
+    clear: both;
+    overflow: hidden;
+}
+
+#main #primary {
+    float: left;
+    width: 600px;
+}
+
+#main #primary .post-item {
+    background: #e1e1e1;
+    margin-bottom: 28px;
+    border: 2px solid #ffffff;
+    padding-right: 40px;
+    overflow: hidden;
+}
+
+.post-item img {
+    float: left;
+    padding: 30px 20px 30px 30px;
+}
+
+.post-item h2 {
+    font-size: 24px;
+    color: #373737;
+    font-weight: bold;
+    padding-top: 30px;
+}
+
+.post-item p.meta {
+    background: #2f3743;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px;
+    margin-left: 192px;
+    margin-bottom: 14px;
+    width: 100px;
+    color:#FFF;
+    text-align: center;
+    font-style: normal;
+
+}
+
+.post-item p {
+    color: #666666;
+    font-style: italic;
+}
+
+
+.more {
+    background: url(img/more.jpg) no-repeat;
+    font-size: 22px;
+    color: #ffffff;
+    padding: 8px;
+    font-style: italic;
+    float: right;
+    width: 152px;
+}
+
+
+#main #secondary {
+    float: right;
+    width: 285px;
+
+}
+
+#secondary h3 {
+    background: #2f3743;
+    color: #FFF;
+    padding: 3px 0 2px 8px;
+    margin: 4% 0;
+}
+
+.secondary-box {
+    background: #d9d9d9;
+    border: 1px solid #FFF;
+    margin-bottom: 28px;
+    padding: 0 4%;
+    overflow: hidden;
+    height: 220px;
+}
+
+#photos img {
+    border: none;
+}
+
+#photos img.featured-image{
+    border: 1px solid #FFF;
+    margin: 0
+    padding: 0;
+    width: 100%;
+
+}
+
+
+#photos p {
+    float: left;
+    color: #373737;
+    font-weight: bold;
+}
+
+#photos .prev-next {
+    float: right;
+}
+
+
+
+#recent-entries ul li {
+    padding: 3px 0 3px 0;
+    border-bottom: 1px solid #bbbbbb;
+    border-top: 1px solid #ffffff;
+
+}
+
+#recent-entries ul li:first-child {
+
+    border-top: none;
+
+}
+
+#recent-entries ul li:last-child {
+
+    border-bottom: none;
+
+}
+
+#recent-entries ul li a {
+    color: #373737;
+    font-size:12px;
+}
+
+
+
+
+
+
+
+
+
