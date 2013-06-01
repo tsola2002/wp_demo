@@ -254,20 +254,20 @@ input: focus, input:hover {
 }
 
 
-#main #secondary {
+#main #sidebar {
     float: right;
     width: 285px;
 
 }
 
-#secondary h3 {
+.widget h2 {
     background: #2f3743;
     color: #FFF;
     padding: 3px 0 2px 8px;
     margin: 4% 0;
 }
 
-.secondary-box {
+.widget {
     background: #d9d9d9;
     border: 1px solid #FFF;
     margin-bottom: 28px;
@@ -276,51 +276,28 @@ input: focus, input:hover {
     height: 220px;
 }
 
-#photos img {
-    border: none;
-}
-
-#photos img.featured-image{
-    border: 1px solid #FFF;
-    margin: 0
-    padding: 0;
-    width: 100%;
-
-}
 
 
-#photos p {
-    float: left;
-    color: #373737;
-    font-weight: bold;
-}
-
-#photos .prev-next {
-    float: right;
-}
-
-
-
-#recent-entries ul li {
+.widget ul li {
     padding: 3px 0 3px 0;
     border-bottom: 1px solid #bbbbbb;
     border-top: 1px solid #ffffff;
 
 }
 
-#recent-entries ul li:first-child {
+.widget ul li:first-child {
 
     border-top: none;
 
 }
 
-#recent-entries ul li:last-child {
+.widget ul li:last-child {
 
     border-bottom: none;
 
 }
 
-#recent-entries ul li a {
+.widget ul li a {
     color: #373737;
     font-size:12px;
 }
