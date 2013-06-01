@@ -1,68 +1,40 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta name="generator" content="wordpress <?php bloginfo('version'); ?>"/>
-    <meta http-equiv="content-type" content="<?php bloginfo('html_type');?> <?php bloginfo('charset'); ?>"/>
-
-
-    <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
-
-    <link href="<?php bloginfo('stylesheet_url'); ?>" media="screen" rel="stylesheet" type="text/css"/>
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo(rss2_url); ?>"/>
-    <link rel="pingback" href="<?php bloginfo('pingback_url');?>"/>
-    <link rel="shortcut icon" href="<?php echo bloginfo('template_directory') . '../img/favicon.ico'; ?>"/>
-
-</head>
-<body>
-<div id="wrap">
-    <div id="header">
-        <h1><a href="#">Manilla</a></h1>
-        <ul>
-            <li id="home"><a href="#"> Home</a></li>
-            <li id="about"><a href="#">About</a></li>
-            <li id="contact"><a href="#">Contact</a></li>
-            <li id="search"><img src="<?php echo bloginfo('template_directory') . '../img/search.png'; ?>" /> <input type="text" name="search" value="search"/></li>
-            <li id="rss"><a href="#"><img src="<?php echo bloginfo('template_directory') . '../img/rss.png'; ?>" /></a></li>
-        </ul>
-        <p id="slogan"> Another Rarely Updated Blog</p>
-
-    </div> <!--  End of header  -->
+    <?php get_header(); ?>
 
     <div id="main">
         <div id="primary">
-            <div class="post-item">
-                <img src="<?php echo bloginfo('template_directory') . '../img/model1.jpg'; ?>" />
-                <h2>Another New Tutorial</h2>
 
-                <p class="meta">Inspiration 41+</p>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-            </div> <!--  End of post-item  -->
+            <?php if(have_posts()) : while(have_posts()) : the_post() ?>
 
-            <div class="post-item">
-                <img src="<?php echo bloginfo('template_directory') . '../img/model2.jpg'; ?>" />
-                <h2>Another New Tutorial</h2><p class="meta">Inspiration 41+</p>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-            </div> <!--  End of post-item  -->
+                <div class="post-item">
+                    <img src="<?php echo bloginfo('template_directory') . '../img/model1.jpg'; ?>" />
+                    <h2><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h2>
+
+                    <p class="meta">Posted By <?php the_author(); ?> on <?php the_date(); ?></p>
+
+                    <?php the_content(); ?>
+
+                    <div class="num_comments">
+                        <a href="<?php comments_link(); ?>"><?php comments_number('0', '1', '%'); ?></a>
+                    </div><!--  End of num_comments  -->
+
+                    <div id="moreprev">
+                        <?php next_posts_link('...More'); ?>
+                        <?php previous_posts_link('...Previous'); ?>
+                    </div><!--  End of moreprev  -->
+
+                </div> <!--  End of post-item  -->
+
+            <?php endwhile; ?>
+
+            <?php else : ?>
+                <p>Not sure what youre looking for</p>
+            <?php endif; ?>
 
 
-
-            <div class="post-item">
-                <img src="<?php echo bloginfo('template_directory') . '../img/model3.jpg'; ?>" />
-                <h2>Another New Tutorial</h2>
-                <p class="meta">Inspiration 41+</p>
-                <p>This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit
-                    auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit
-                    consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
-            </div> <!--  End of post-item  -->
 
             <a href="#" class="more">More ...</a>
         </div>
         <!--  End of primary  -->
-
 
         <div id="secondary">
             <div class="secondary-box" id="photos">
@@ -96,9 +68,9 @@
             </div>  <!--  End of secondary-box  -->
 
         </div> <!--  End of secondary  -->
+
+
+
     </div> <!--  End of main  -->
-</div> <!--  End of wrap  -->
 
-</body>
-</html>
-
+    <?php get_footer(); ?>
