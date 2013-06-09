@@ -32,7 +32,7 @@
             <?php wp_list_pages('title_li='); ?>
         </ul>
         <div id="search">
-            <img src="<?php echo bloginfo('template_directory') . '../img/search.png'; ?>" />
+            <img id="search_icon" src="<?php echo bloginfo('template_directory') . '../img/search.png'; ?>" />
             <?php include TEMPLATEPATH . '/searchform.php';  ?>
 
 

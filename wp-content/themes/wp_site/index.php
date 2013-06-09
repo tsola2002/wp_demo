@@ -11,7 +11,7 @@
 
             <p class="meta">Posted By <?php the_author(); ?> on <?php the_date(); ?></p>
 
-            <?php the_content(); ?>
+            <?php the_content('Read More...'); ?>
 
             <div class="num_comments">
                 <a href="<?php comments_link(); ?>"><?php comments_number('0', '1', '%'); ?></a>

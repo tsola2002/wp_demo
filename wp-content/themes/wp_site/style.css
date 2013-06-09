@@ -38,7 +38,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
     line-height: 1;
-    background:url(img/bg.jpg) repeat-x;
+    background:url(img/bg.jpg) #dcdcdc repeat-x;
 }
 
 ol, ul {
@@ -77,7 +77,6 @@ a:hover {
 
 input {
     background: #1e1e1e;
-    border: 1px solid #d9d9d9;
     color: #d9d9d9;
 }
 
@@ -89,6 +88,10 @@ input: focus, input:hover {
 #wrap {
     width: 960px;
     margin: 0 auto;
+}
+
+#header {
+    position: relative;
 }
 
 #header h1 {
@@ -127,13 +130,13 @@ input: focus, input:hover {
     height: 31px;
 }
 
-#header ul li#about {
+#header ul li.page-item-12 {
     background:url(img/about.png) no-repeat;
     width: 39px;
     height: 31px;
 }
 
-#header ul li#contact {
+#header ul li.page-item-14 {
     background:url(img/contact.png) no-repeat;
     width: 39px;
     height: 31px;
@@ -151,34 +154,49 @@ input: focus, input:hover {
 
 
 
-#header li#search {
-    margin-top: 22px;
-    margin-left: 60px;
-    margin-right: 0;
+#header #search {
+
+    position: absolute;
+    height: 66px;
+    width: 270px;
+    top: 35px;
+    right: 0;
 }
 
-#header li#search img {
-    margin-top: 5px;
-    margin-right: 10px;
-    margin-left: 10px;
+#header #search img {
+
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
-#header li#search input {
-    position: relative;
-    top: -10px;
-    height: 24px;
+#header #search img#search_icon {
+
+   right: 280px;
 }
 
-#header ul li#rss {
+
+
+#header #search input#s {
+    width: 130px;
+    border: none;
+    height: 25px;
+}
+
+#header ul #rss {
     float: right;
     margin: 0;
     padding: 0;
 }
 
-#header ul li#rss img {
+#header #rss img {
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 30px;
     padding-right: 1px;
     margin-top: 17px;
+
 }
 
 #header p#slogan {
@@ -188,9 +206,8 @@ input: focus, input:hover {
     width: 569px;
     height: 45px;
     float: right;
-    padding-right: 14px;
-    margin-top: 20px;
-    padding-bottom: 5px;
+    margin: 28px 0 30px 0;
+    padding: 4px;
 }
 
 #main {
@@ -209,37 +226,58 @@ input: focus, input:hover {
     border: 2px solid #ffffff;
     padding-right: 40px;
     overflow: hidden;
+    position: relative;
+
 }
 
 .post-item img {
     float: left;
     padding: 30px 20px 30px 30px;
+
 }
 
 .post-item h2 {
     font-size: 24px;
     color: #373737;
-    font-weight: bold;
     padding-top: 30px;
+    letter-spacing: 1px;
+    font-weight: normal;
+    line-height: 32px;
+    padding-right: .5em;
+}
+
+.post-item h2 a{
+    font-size: 27px;
 }
 
 .post-item p.meta {
     background: #2f3743;
     font-size: 11px;
-    font-weight: bold;
     padding: 4px;
-    margin-left: 192px;
-    margin-bottom: 14px;
-    width: 100px;
+    margin-left: 202px;
+    margin-bottom: 20px;
+    width: 170px;
+    min-width: 170px;
     color:#FFF;
     text-align: center;
     font-style: normal;
+    height: 33px;
+    line-height: 20px;
+
 
 }
 
 .post-item p {
     color: #666666;
     font-style: italic;
+    margin-bottom: 1.2em;
+    margin-left: 200px;
+
+}
+
+a.more-link{
+    color: #2f3743;
+    font-weight: bold;
 }
 
 
@@ -251,6 +289,26 @@ input: focus, input:hover {
     font-style: italic;
     float: right;
     width: 152px;
+}
+
+div.num_comments{
+   background: url(img/speech_bubble.png);
+   position: absolute;
+   top: 15px;
+   right: 15px;
+   height: 38px;
+   width: 43px;
+   text-align: center;
+
+}
+
+.num_comments a{
+    display: block;
+    height: 38px;
+    width: 43px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff;
 }
 
 
