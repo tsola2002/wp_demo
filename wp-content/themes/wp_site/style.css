@@ -275,6 +275,24 @@ input: focus, input:hover {
 
 }
 
+body.single div.post-item p {
+    font-style: normal;
+}
+
+.single div.post-item ul {
+    margin: 1em 0;
+    color: #7e7e7e;
+}
+
+.single .post-item ul li {
+    padding-left: 1em;
+    margin-left: 2em;
+    list-style: disc;
+    line-height: 2em;
+}
+
+
+
 a.more-link{
     color: #2f3743;
     font-weight: bold;

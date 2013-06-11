@@ -23,7 +23,7 @@
 <?php wp_head(); ?>
 
 </head>
-<body>
+<?php echo is_single()? '<body class="single">' : '<body>' ?>
 <div id="wrap">
     <div id="header">
         <h1><a href="<?php bloginfo('url') ?>">Manilla</a></h1>
