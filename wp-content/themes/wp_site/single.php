@@ -43,7 +43,9 @@
                 <p>Not sure what youre looking for</p>
             <?php endif; ?>
 
-
+            <div id="comments_template">
+                <?php comments_template(); ?>
+            </div><!--  end of comments template  -->
 
             <a href="#" class="more">More ...</a>
         </div>
