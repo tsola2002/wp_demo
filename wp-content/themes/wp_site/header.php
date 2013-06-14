@@ -28,7 +28,7 @@
     <div id="header">
         <h1><a href="<?php bloginfo('url') ?>">Manilla</a></h1>
         <ul>
-            <li id="home"><a href="#"> Home</a></li>
+            <li id="home"><a href="<?php bloginfo('url'); ?>"> Home</a></li>
             <?php wp_list_pages('title_li='); ?>
         </ul>
         <div id="search">
