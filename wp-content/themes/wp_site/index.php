@@ -6,7 +6,7 @@
             <?php if(have_posts()) : while(have_posts()) : the_post() ?>
 
               <div class="post-item">
-            <img src="<?php echo bloginfo('template_directory') . '../img/model1.jpg'; ?>" />
+            <img src="<?php $thumb = get_post_custom_values('post-image'); echo $thumb[0]; ?>" alt="<?php the_title(); ?>"/>
             <h2><a href="<?php the_permalink(); ?>"><?php the_title(''); ?></a></h2>
 
             <p class="meta">Posted By <?php the_author(); ?> on <?php the_date(); ?></p>
