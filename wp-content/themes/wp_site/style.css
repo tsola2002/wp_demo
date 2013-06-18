@@ -175,7 +175,17 @@ input: focus, input:hover {
    right: 280px;
 }
 
+input#searchsubmit{
+    border: none;
+    height: 25px;
+    width: 65px;
+    font-weight: bold;
+}
 
+input#searchsubmit:hover {
+    background: #383838;
+    color: #d9d9d9;
+}
 
 #header #search input#s {
     width: 130px;
@@ -209,6 +219,9 @@ input: focus, input:hover {
     margin: 28px 0 30px 0;
     padding: 4px;
 }
+
+/*MAIN SECTION*/
+
 
 #main {
     clear: both;
@@ -246,8 +259,16 @@ input: focus, input:hover {
     padding-right: .5em;
 }
 
+h2.post-title{
+    padding: 8px 0;
+    font-weight: bold;
+
+
+}
+
 .post-item h2 a{
     font-size: 27px;
+    color: #2f3743;
 }
 
 .post-item p.meta {
@@ -308,6 +329,13 @@ a.more-link{
     float: right;
     width: 152px;
 }
+
+/*ADD THIS TOOLBOX*/
+
+div.addthis_toolbox {
+    padding-left: 150px;
+}
+
 
 div.num_comments{
    background: url(img/speech_bubble.png);
