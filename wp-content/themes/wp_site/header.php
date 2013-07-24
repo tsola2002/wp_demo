@@ -19,7 +19,7 @@
 <link href="<?php bloginfo('stylesheet_url'); ?>" media="screen" rel="stylesheet" type="text/css"/>
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php bloginfo(rss2_url); ?>"/>
 <link rel="pingback" href="<?php bloginfo('pingback_url');?>"/>
-<link rel="shortcut icon" href="<?php echo bloginfo('template_directory') . '../img/favicon.ico'; ?>"/>
+<link rel="shortcut icon" href="<?php echo bloginfo('template_directory') . '/img/favicon.ico'; ?>"/>
 <?php wp_head(); ?>
 
 </head>
@@ -32,12 +32,12 @@
             <?php wp_list_pages('title_li='); ?>
         </ul>
         <div id="search">
-            <img id="search_icon" src="<?php echo bloginfo('template_directory') . '../img/search.png'; ?>" />
+            <img id="search_icon" src="<?php echo bloginfo('template_directory') . '/img/search.png'; ?>" />
             <?php include TEMPLATEPATH . '/searchform.php';  ?>
 
 
             <a href="<?php bloginfo('rss2_url'); ?>">
-                <img src="<?php echo bloginfo('template_directory') . '../img/rss.png'; ?>" alt="rss" />
+                <img src="<?php echo bloginfo('template_directory') . '/img/rss.png'; ?>" alt="rss" />
 
             </a>
         </div>
