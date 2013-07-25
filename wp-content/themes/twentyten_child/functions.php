@@ -21,3 +21,31 @@ function ttc_header_height(){
 
 add_filter('twentyten_header_image_width', 'ttc_header_width');
 add_filter('twentyten_header_image_height', 'ttc_header_height');
+
+// Remove all custom worpress featured images
+function remove_twentyTen_headers() {
+    unregister_default_headers( array(
+        'berries',
+        'cherryblossom',
+        'concave',
+        'fern',
+        'forestfloor',
+        'inkwell',
+        'path',
+        'sunset'
+    ));
+}
+
+add_action('after_setup_theme', 'remove_twentyTen_headers', 11);
+
+// Add new default header image
+register_default_headers(
+    array(
+        'TwentyTen Child' => array(
+            'url' => "%s/../twentyten_child/images/HPmainGeneric.png",
+            'thumbnail_url' => "%s/../twentyten_child/images/HPmainGenericThumb.png",
+            /* translators: header image description */
+            'description' => __( 'TwentyTen Child Header', 'twentyten' )
+        )
+    )
+);
