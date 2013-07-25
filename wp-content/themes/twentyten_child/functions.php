@@ -49,3 +49,15 @@ register_default_headers(
         )
     )
 );
+
+// This theme uses wp_nav_menu() in one location.
+register_nav_menus( array(
+    'header' => __( 'Header Navigation', 'twentyten' ),
+    'footer' => __( 'Footer Navigation', 'twentyten' )
+) );
+
+// Remove the default menu function
+function ttc_remove_default_menu() {
+    unregister_nav_menu( 'primary' );
+}
+
